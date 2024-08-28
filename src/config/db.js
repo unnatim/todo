@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const db = process.env.TO_DO_DB;
+const db = process.env.MONGODB_URI;
 
 const connectDB = async () => {
   let attempts = 10;
