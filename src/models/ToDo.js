@@ -9,7 +9,7 @@ const ToDoSchema = new Schema({
     type: Boolean,
     default: false
   }
-});
+}, { collection: 'todo' });
 
-const ToDo = model('toDo', ToDoSchema);
+const ToDo = model('todo', ToDoSchema);
 module.exports = ToDo;
