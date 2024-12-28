@@ -16,8 +16,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // for testing purposes
-app.get('/test', (req, res) => {
-  res.status(200).send({ text: 'Simple Node App Working!!' });
+// app.get('/test', (req, res) => {
+//   res.status(200).send({ text: 'Simple Node App Working!' });
+// });
+
+app.get('/test', (req, res, next) => {
+  // Optionally, bypass any middleware here
+  next(); // Continue to the next middleware (your response handler)
+}, (req, res) => {
+  res.status(200).send({ text: 'Simple Node App Working!' });
 });
 
 routes(app);
