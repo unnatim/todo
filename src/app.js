@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 // for testing purposes
 app.get('/test', (req, res) => {
-  res.status(200).send({ text: 'Simple Node App Working!' });
+  res.status(200).send({ text: 'Simple Node App Working!!' });
 });
 
 routes(app);
